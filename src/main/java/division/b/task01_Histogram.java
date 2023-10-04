@@ -3,6 +3,7 @@ package division.b;
 import java.io.*;
 import java.util.Scanner;
 import java.util.TreeMap;
+import java.util.regex.Pattern;
 
 public class task01_Histogram {
 
@@ -39,13 +40,10 @@ public class task01_Histogram {
 
     private void start() {
         try (Scanner scanner = new Scanner(System.in)) {
-            String stringBuffer = null;
+            String stringBuffer;
             int count;
-            while (scanner.hasNextLine()) {
+            do  {
                 stringBuffer = scanner.nextLine();
-                if (stringBuffer.isEmpty()) {
-                    break;
-                }
                 for (char buffer : stringBuffer.toCharArray()) {
                     if (buffer != ' ') {
                         answer.merge(buffer, 1, (a, b) -> answer.get(buffer) + 1);
@@ -55,7 +53,8 @@ public class task01_Histogram {
                         }
                     }
                 }
-            }
+            } while (scanner.hasNextLine());
+
         }
         printAnswer();
         //print();
