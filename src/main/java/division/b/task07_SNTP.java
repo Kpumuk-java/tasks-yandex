@@ -82,9 +82,6 @@ public class task07_SNTP {
                     stringBuilder.insert(0,":");
                 }
             }
-
-
-
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

@@ -17,7 +17,7 @@ public class task07_SNTPTest {
 
 
     @AfterClass
-    public static void afterClass() throws IOException {
+    public static void afterClass() {
         input.getAbsoluteFile().delete();
         input2.getAbsoluteFile().delete();
         input3.getAbsoluteFile().delete();
